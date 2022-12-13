@@ -1,0 +1,2 @@
+# contains any file/folders we do not want to expose in our git repository
+node_modules/
