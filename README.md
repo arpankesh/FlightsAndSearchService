@@ -1,3 +1,25 @@
+# Welcome to Flights Service
+
+## Project Setup :-
+    - clone the project on your local
+    - execute "npm install" on the same path as your root directory of the downloaded project
+    - create a `.env` file in your root directory and add the following environment variables :-
+        - `PORT = 3000`
+    -inside the src/config folder add the following piece of json :-
+        ```
+        {
+            "development": {
+                "username": "<YOUR_DB_LOGIN_NAME>",
+                "password": "<YOUR_DB_PASSWORD>",
+                "database": "Flights_Search_DB_DEV",
+                "host": "127.0.0.1",
+                "dialect": "mysql"
+            }
+        }
+        ```
+    -Once you have added the db config as listed above, go to the src folder from your terminal and execute `npx sequelize db:create`
+
+
 We are doing Role/Task based proj dev, not feature based (In the latter we could have seperate folders for flights, search etc. and each folder can then have models, controllers, services etc.)
 
 /
