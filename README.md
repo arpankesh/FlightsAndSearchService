@@ -6,6 +6,7 @@
     - create a `.env` file in your root directory and add the following environment variables :-
         - `PORT = 3000`
     -inside the src/config folder add the following piece of json :-
+    -inside the src/config folder add the following piece of code :-
         ```
         {
             "development": {
