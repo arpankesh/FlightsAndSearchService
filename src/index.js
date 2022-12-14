@@ -1,3 +1,4 @@
+// Setting up a server
 const express = require("express");
 const bodyParser = require("body-parser");
 
