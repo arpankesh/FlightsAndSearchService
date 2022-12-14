@@ -18,7 +18,18 @@
             }
         }
         ```
-    -Once you have added the db config as listed above, go to the src folder from your terminal and execute `npx sequelize db:create`
+    -Once you have added the db config as listed above, go to the src folder from your terminal and execute `npx sequelize db:create` and then execute :-
+    `npx sequelize db:migrate`
+
+## DB Design :-
+    - Airport Table
+    - Aeroplane Table
+    - Flights Table
+    - City Table
+
+    -A flight belongs to one airplane, but 1 airplane can be used in many flights
+    -A city has many airports but 1 airport belongs to 1 city
+    -One airport can have many flights, but 1 flight belongs to one airport
 
 
 We are doing Role/Task based proj dev, not feature based (In the latter we could have seperate folders for flights, search etc. and each folder can then have models, controllers, services etc.)
