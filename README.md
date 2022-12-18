@@ -36,6 +36,10 @@
 ### City -> id, name, created_At, updated_At
 ### Airport -> id, name, address, city_id, created_At, updated_At
         Relationship -> One City can have many Airports, but one Airport belongs to one City (one to many)
+```
+ In the src folder, run :- npx sequelize model:generate --name Airport --attributes name:String,address:String,cityId:integer
+
+```
 
 
 We are doing Role/Task based proj dev, not feature based (In the latter we could have seperate folders for flights, search etc. and each folder can then have models, controllers, services etc.)

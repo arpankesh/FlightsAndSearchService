@@ -5,6 +5,9 @@ const bodyParser = require("body-parser");
 const { PORT } = require("./config/serverConfig.js");
 const ApiRoutes = require("./routes/index.js")
 
+const db = require("./models/index.js")
+// const { Airport, City } = require("./models/index.js")
+
 const setupAndStartServer = async function () {
 
     // create the express object
@@ -17,6 +20,12 @@ const setupAndStartServer = async function () {
 
     app.listen(PORT, async () => {
         console.log(`Server started at ${PORT}`);   //This using `` is called as string interpolation
+
+        if (process.env.SYNC_DB) {
+            db.sequelize.sync({ alter: true });
+        }
+
+
     })
 };
 
