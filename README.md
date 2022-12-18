@@ -31,6 +31,12 @@
     -A city has many airports but 1 airport belongs to 1 city
     -One airport can have many flights, but 1 flight belongs to one airport
 
+## Tables
+
+### City -> id, name, created_At, updated_At
+### Airport -> id, name, address, city_id, created_At, updated_At
+        Relationship -> One City can have many Airports, but one Airport belongs to one City (one to many)
+
 
 We are doing Role/Task based proj dev, not feature based (In the latter we could have seperate folders for flights, search etc. and each folder can then have models, controllers, services etc.)
 
