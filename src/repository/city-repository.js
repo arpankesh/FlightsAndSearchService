@@ -1,5 +1,7 @@
 //Imports the model City from the db obj of that file, which is imported as a class from model/city.js
 const { City } = require("../models/index.js");
+// Importing Operator provided by sequelize to perform LIKE query
+const { Op } = require("sequelize");
 
 class CityRepository {
     async createCity({ name }) {
@@ -60,8 +62,18 @@ class CityRepository {
         }
     }
 
-    async getAllCities() {
+    async getAllCities(filter) {
         try {
+            if (filter.name) {
+                const cities = await City.findAll({
+                    where: {
+                        name: {
+                            [Op.startsWith]: filter.name
+                        }
+                    }
+                })
+                return cities;
+            }
             const cities = await City.findAll();
             return cities;
         } catch (error) {
