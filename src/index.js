@@ -6,7 +6,7 @@ const { PORT } = require("./config/serverConfig.js");
 const ApiRoutes = require("./routes/index.js")
 
 const db = require("./models/index.js")
-// const { Airport, City } = require("./models/index.js")
+const { Airplane } = require("./models/index.js")
 
 const setupAndStartServer = async function () {
 
@@ -25,6 +25,9 @@ const setupAndStartServer = async function () {
             db.sequelize.sync({ alter: true });
         }
 
+        await Airplane.create({
+            modelNumber: "Bombardier CRJ"
+        })
 
     })
 };

@@ -5,6 +5,7 @@ const cityService = new CityService();
 // POST
 const create = async (req, res) => {
     try {
+        console.log("Hello There");
         const city = await cityService.createCity(req.body);
         return res.status(201).json({
             data: city,
