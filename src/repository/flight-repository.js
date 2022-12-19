@@ -24,7 +24,7 @@ class FlightRepository {
         // }
         // // filter.price = { [Op.and]: priceFilter };
         // Object.assign(filter, { [Op.and]: priceFilter });
-        // return filter;
+        return filter;
     }
 
     async createFlight(data) {
