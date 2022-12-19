@@ -25,9 +25,9 @@ const setupAndStartServer = async function () {
             db.sequelize.sync({ alter: true });
         }
 
-        await Airplane.create({
-            modelNumber: "Bombardier CRJ"
-        })
+        // await Airplane.create({
+        //     modelNumber: "Bombardier CRJ"
+        // })
 
     })
 };
