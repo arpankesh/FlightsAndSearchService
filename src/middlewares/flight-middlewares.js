@@ -1,4 +1,4 @@
-const { nextTick } = require("process")
+const { ClientErrorCodes } = require("../utils/error-codes.js");
 
 const validateCreateFlight = (req, res, next) => {
     if (
@@ -11,7 +11,7 @@ const validateCreateFlight = (req, res, next) => {
         !req.body.price
     ) {
         // If any of the above details are not present
-        return res.status(400).json({
+        return res.status(ClientErrorCodes.BAD_REQUEST).json({
             data: {},
             success: false,
             message: "Invalid request for creating a flight",

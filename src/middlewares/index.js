@@ -1,3 +1,3 @@
 module.exports = {
-    FlightMiddleWares: require("./airport-middlewares.js")
+    FlightMiddleWares: require("./flight-middlewares.js")
 }
